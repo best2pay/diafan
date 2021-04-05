@@ -14,7 +14,12 @@ if (! defined('DIAFAN'))
 
 echo $result["text"];
 
+//echo '<pre>';
+//print_r($result);
+
+if ($result["resultUrl"]) {
 ?>
 <form id="pay" name="pay" method="POST" action="<?php echo $result["resultUrl"]?>">
     <p><input type="submit" value="<?php echo $this->diafan->_('Оплатить', false);?>"></p>
 </form>
+<?php } ?>
